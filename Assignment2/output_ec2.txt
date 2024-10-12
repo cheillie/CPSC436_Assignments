@@ -1,0 +1,42 @@
+ubuntu@ip-172-31-19-251:/tmp$ time docker run image-recognition
+2024-10-12 22:11:22.283672: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-10-12 22:11:22.444927: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2024-10-12 22:11:22.444974: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2024-10-12 22:11:23.413108: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2024-10-12 22:11:23.413220: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2024-10-12 22:11:23.413241: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Downloading data from https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+170498071/170498071 [==============================] - 1s 0us/step
+2024-10-12 22:11:29.650448: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2024-10-12 22:11:29.650515: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2024-10-12 22:11:29.650547: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (d8c4861003b5): /proc/driver/nvidia/version does not exist
+2024-10-12 22:11:29.651069: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-10-12 22:11:30.279654: W tensorflow/tsl/framework/cpu_allocator_impl.cc:82] Allocation of 614400000 exceeds 10% of free system memory.
+Epoch 1/10
+1563/1563 [==============================] - 55s 35ms/step - loss: 1.5301 - accuracy: 0.4379 - val_loss: 1.2944 - val_accuracy: 0.5354
+Epoch 2/10
+1563/1563 [==============================] - 54s 34ms/step - loss: 1.1606 - accuracy: 0.5878 - val_loss: 1.1504 - val_accuracy: 0.5831
+Epoch 3/10
+1563/1563 [==============================] - 54s 34ms/step - loss: 1.0090 - accuracy: 0.6427 - val_loss: 1.0110 - val_accuracy: 0.6422
+Epoch 4/10
+1563/1563 [==============================] - 54s 35ms/step - loss: 0.9073 - accuracy: 0.6798 - val_loss: 0.9208 - val_accuracy: 0.6790
+Epoch 5/10
+1563/1563 [==============================] - 54s 35ms/step - loss: 0.8383 - accuracy: 0.7054 - val_loss: 0.9256 - val_accuracy: 0.6826
+Epoch 6/10
+1563/1563 [==============================] - 53s 34ms/step - loss: 0.7889 - accuracy: 0.7225 - val_loss: 0.9195 - val_accuracy: 0.6821
+Epoch 7/10
+1563/1563 [==============================] - 53s 34ms/step - loss: 0.7384 - accuracy: 0.7397 - val_loss: 0.8847 - val_accuracy: 0.7039
+Epoch 8/10
+1563/1563 [==============================] - 54s 34ms/step - loss: 0.6963 - accuracy: 0.7528 - val_loss: 0.8723 - val_accuracy: 0.7063
+Epoch 9/10
+1563/1563 [==============================] - 54s 34ms/step - loss: 0.6611 - accuracy: 0.7656 - val_loss: 0.8586 - val_accuracy: 0.7073
+Epoch 10/10
+1563/1563 [==============================] - 54s 34ms/step - loss: 0.6235 - accuracy: 0.7782 - val_loss: 0.8721 - val_accuracy: 0.7084
+313/313 - 3s - loss: 0.8721 - accuracy: 0.7084 - 3s/epoch - 10ms/step
+Test accuracy: 0.7084000110626221
+
+real    9m38.049s
+user    0m0.450s
+sys     0m0.390s
