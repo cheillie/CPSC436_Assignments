@@ -1,0 +1,36 @@
+ubuntu@ip-10-0-0-187:~/tmp$ time python scenario2_image-recognition.py 
+2024-10-23 03:02:50.842908: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-10-23 03:02:50.865726: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-10-23 03:02:50.872199: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-10-23 03:02:50.887858: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-10-23 03:02:56.082219: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/opt/tensorflow/lib/python3.12/site-packages/keras/src/layers/convolutional/base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+2024-10-23 03:03:34.945693: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:266] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+Epoch 1/10
+1407/1407 ━━━━━━━━━━━━━━━━━━━━ 32s 20ms/step - accuracy: 0.3427 - loss: 1.8047 - val_accuracy: 0.5188 - val_loss: 1.3413
+Epoch 2/10
+1407/1407 ━━━━━━━━━━━━━━━━━━━━ 29s 21ms/step - accuracy: 0.5367 - loss: 1.3136 - val_accuracy: 0.5550 - val_loss: 1.2502
+Epoch 3/10
+1407/1407 ━━━━━━━━━━━━━━━━━━━━ 30s 21ms/step - accuracy: 0.5873 - loss: 1.1762 - val_accuracy: 0.5900 - val_loss: 1.1848
+Epoch 4/10
+1407/1407 ━━━━━━━━━━━━━━━━━━━━ 30s 21ms/step - accuracy: 0.6259 - loss: 1.0733 - val_accuracy: 0.6052 - val_loss: 1.1465
+Epoch 5/10
+1407/1407 ━━━━━━━━━━━━━━━━━━━━ 29s 21ms/step - accuracy: 0.6487 - loss: 1.0112 - val_accuracy: 0.6010 - val_loss: 1.1385
+Epoch 6/10
+1407/1407 ━━━━━━━━━━━━━━━━━━━━ 29s 21ms/step - accuracy: 0.6690 - loss: 0.9450 - val_accuracy: 0.6142 - val_loss: 1.1174
+Epoch 7/10
+1407/1407 ━━━━━━━━━━━━━━━━━━━━ 29s 20ms/step - accuracy: 0.6940 - loss: 0.8806 - val_accuracy: 0.6186 - val_loss: 1.0944
+Epoch 8/10
+1407/1407 ━━━━━━━━━━━━━━━━━━━━ 28s 20ms/step - accuracy: 0.7063 - loss: 0.8389 - val_accuracy: 0.6354 - val_loss: 1.0871
+Epoch 9/10
+1407/1407 ━━━━━━━━━━━━━━━━━━━━ 28s 20ms/step - accuracy: 0.7251 - loss: 0.7736 - val_accuracy: 0.6098 - val_loss: 1.1716
+Epoch 10/10
+1407/1407 ━━━━━━━━━━━━━━━━━━━━ 30s 21ms/step - accuracy: 0.7418 - loss: 0.7358 - val_accuracy: 0.6368 - val_loss: 1.0832
+313/313 ━━━━━━━━━━━━━━━━━━━━ 2s 7ms/step - accuracy: 0.6303 - loss: 1.0933  
+Test accuracy: 0.6297000050544739
+
+real    5m44.129s
+user    15m50.004s
+sys     0m31.076s
